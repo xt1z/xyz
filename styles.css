@@ -1,0 +1,416 @@
+@font-face {
+  font-family: 'BK'; /*a name to be used later*/
+  src: url('fonts/PK\ Krung\ Thep-Medium.ttf');
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #080808;
+  --foreground: #f8f8f9;
+  --card-background: rgba(0, 0, 0, 0.4);
+  --card-border: rgba(155, 135, 245, 0.2);
+  --purple-accent: #9b87f5;
+  --purple-hover: #b19df8;
+  --card-glow: rgba(155, 135, 245, 0.2);
+  --card-glow-hover: rgba(155, 135, 245, 0.35);
+  --secondary: rgba(255, 255, 255, 0.6);
+  --muted: rgba(255, 255, 255, 0.650);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0c0e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3f;
+}
+
+/* Background canvas */
+.background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Card styles */
+.card {
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px var(--card-glow);
+  transition: box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.card:hover {
+  box-shadow: 0 0 30px var(--card-glow-hover);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  color: var(--purple-accent);
+}
+
+.card-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--purple-accent);
+}
+
+/* Welcome card */
+.welcome-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.text-purple {
+  color: var(--purple-accent);
+}
+
+.welcome-text {
+  color: var(--muted);
+}
+
+/* About card */
+.about-text {
+  font-family: BK;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.skills-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(10, 10, 15, 1);
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.skill-bullet {
+  width: 6px;
+  height: 6px;
+  background-color: var(--purple-accent);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.skill-name {
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+.csharp-icon {
+  background-color: rgba(0, 122, 204, 0.2);
+  color: #00aaff;
+}
+
+.python-icon {
+  background-color: rgba(255, 204, 0, 0.2);
+  color: #ffcc00;
+}
+
+.html-icon {
+  background-color: rgba(228, 77, 38, 0.2);
+  color: #ff6a3c;
+}
+
+.css-icon {
+  background-color: rgba(38, 77, 228, 0.2);
+  color: #3c91ff;
+}
+
+.ps-icon {
+  background-color: rgba(49, 168, 255, 0.2);
+  color: #31a8ff;
+}
+
+.pr-icon {
+  background-color: rgba(213, 87, 255, 0.2);
+  color: #d557ff;
+}
+
+/* Clock card */
+.clock-container {
+  text-align: center;
+}
+
+.clock {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.time-unit {
+  letter-spacing: 0.1em;
+}
+
+.time-separator {
+  margin: 0 0.5rem;
+}
+
+.timezone {
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+
+/* Education card */
+.education-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.education-item {
+  background-color: rgba(10, 10, 15, 1);
+  padding: 1rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.3s;
+}
+
+.education-item:hover {
+  background-color: rgba(22, 22, 29, 1);
+}
+
+.degree {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.school-info {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* Music card */
+.music-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.music-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  font-family: BK;
+}
+
+.music-item:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.album-cover {
+  position: relative;
+  min-width: 4rem;
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 0.375rem;
+}
+
+.album-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.music-item:hover .album-cover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.music-item:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.music-icon {
+  opacity: 0;
+  color: white;
+  transition: opacity 0.3s;
+}
+
+.music-item:hover .music-icon {
+  opacity: 1;
+}
+
+.music-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+.artist-name {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.release-year {
+  font-size: 0.75rem;
+  color: var(--purple-accent);
+  margin-top: 0.25rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+/* Apply fade-in with random delay to each card */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Responsive grid */
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .music-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .welcome-card {
+    grid-column: span 1;
+  }
+  
+  .about-card {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .time-card {
+    grid-column: span 1;
+  }
+  
+  .education-card {
+    grid-column: span 1;
+  }
+  
+  .music-card {
+    grid-column: span 2;
+  }
+}

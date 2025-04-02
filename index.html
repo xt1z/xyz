@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XQRZ</title>
+  <meta name="description" content="Developer portfolio with modern design and animations">
+  <meta name="author" content="xqrzz">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+  <canvas id="networkBackground" class="background-canvas"></canvas>
+
+  <div class="container">
+    <div class="grid">
+      <!-- Welcome Card -->
+      <div class="card welcome-card">
+        <div class="card-header">
+          <span class="card-title">welcome</span>
+        </div>
+        <div class="card-content">
+          <h1 class="welcome-title">Hi, I'm <span class="text-purple">xqrz</span></h1>
+          <p class="welcome-text">A Student with a passion for Biology and Medical Biology.</p>
+        </div>
+      </div>
+
+      <!-- About Me Card -->
+      <div class="card about-card">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 21C20 18.8783 19.1571 16.8434 17.6569 15.3431C16.1566 13.8429 14.1217 13 12 13C9.87827 13 7.84344 13.8429 6.34315 15.3431C4.84285 16.8434 4 18.8783 4 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="card-title">About me</span>
+        </div>
+        <div class="card-content">
+          <p class="about-text">สวัสดี, ผมชุติพนธ์ จากกรุงเทพฯ ตอนนี้ผมอายุ18ปี กำลังซิ่วเข้าแพทย์รามา O_O!<br>ผมชอบ ชีวะ เคมี และ ฟิสิกส์.</br></p>
+          
+          <div class="skills-container">
+            <h3 class="skills-title">My Skills:</h3>
+            
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-bullet"></div>
+                <span class="skill-name">C#</span>
+                <div class="skill-icon csharp-icon">C#</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-bullet"></div>
+                <span class="skill-name">Python</span>
+                <div class="skill-icon python-icon">🐍</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-bullet"></div>
+                <span class="skill-name">HTML</span>
+                <div class="skill-icon html-icon">&lt;/&gt;</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-bullet"></div>
+                <span class="skill-name">CSS</span>
+                <div class="skill-icon css-icon">{}</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-bullet"></div>
+                <span class="skill-name">Photoshop</span>
+                <div class="skill-icon ps-icon">Ps</div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-bullet"></div>
+                <span class="skill-name">Premiere Pro</span>
+                <div class="skill-icon pr-icon">Pr</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Time Card -->
+      <div class="card time-card">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"></circle>
+              <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <span class="card-title">My Current Time</span>
+        </div>
+        <div class="card-content">
+          <div class="clock-container">
+            <div class="clock">
+              <span id="hours" class="time-unit">12</span>
+              <span class="time-separator">:</span>
+              <span id="minutes" class="time-unit">00</span>
+              <span class="time-separator">:</span>
+              <span id="seconds" class="time-unit">00</span>
+              <span id="ampm" class="time-unit">AM</span>
+            </div>
+            <p class="timezone">Bangkok (GMT+7)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Card -->
+      <div class="card education-card">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 1L1 7L12 13L23 7L12 1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M19 10V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 8V14C5 15.6569 6.79086 17 9 17H15C17.2091 17 19 15.6569 19 14V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="card-title">Education</span>
+        </div>
+        <div class="card-content">
+          <div class="education-items">
+            <div class="education-item">
+              <h3 class="degree">Science and Math</h3>
+              <p class="school-info">Demonstration School of Suansunandha Rajabhat University, 2019-2025</p>
+            </div>
+            <div class="education-item">
+              <h3 class="degree">Currently gap year</h3>
+              <p class="school-info">Aimming for MEDRAMA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Music Card -->
+      <div class="card music-card">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="card-title">Music that I like [April 2025]</span>
+        </div>
+        <div class="card-content">
+          <div class="music-grid">
+            <div class="music-item">
+              <div class="album-cover">
+                <img src="https://i1.sndcdn.com/artworks-dyUy35wWnvBLyN4d-441dqA-t500x500.png" alt="">
+                <div class="overlay">
+                  <div class="music-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18V5l12-2v13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="6" cy="18" r="3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="18" cy="16" r="3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="music-details">
+                <span class="song-title">Dark Thoughts</span>
+                <span class="artist-name">Lil Tecca</span>
+                <span class="release-year">2025</span>
+              </div>
+            </div>
+            
+            <div class="music-item">
+              <div class="album-cover">
+                <img src="https://i.scdn.co/image/ab67616d0000b273072e9faef2ef7b6db63834a3" alt="">
+                <div class="overlay">
+                  <div class="music-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18V5l12-2v13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="6" cy="18" r="3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="18" cy="16" r="3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="music-details">
+                <span class="song-title">Sicko mode</span>
+                <span class="artist-name">Travis Scott</span>
+                <span class="release-year">2018</span>
+              </div>
+            </div>
+
+              <div class="music-item">
+                <div class="album-cover">
+                  <img src="https://i.scdn.co/image/ab67616d00001e025b60256545c634564bc72174" alt="">
+                  <div class="overlay">
+                    <div class="music-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18V5l12-2v13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="6" cy="18" r="3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="18" cy="16" r="3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="music-details">
+                  <span class="song-title">ฉันชอบฝนแต่เธอเป็นร่ม</span>
+                  <span class="artist-name">Urworld</span>
+                  <span class="release-year">2022</span>
+                </div>
+              </div>
+            
+            <div class="music-item">
+              <div class="album-cover">
+                <img src="https://i.scdn.co/image/ab67616d0000b273d70916ee9e40c90380ba5f07" alt="">
+                <div class="overlay">
+                  <div class="music-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18V5l12-2v13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="6" cy="18" r="3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="18" cy="16" r="3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="music-details">
+                <span class="song-title">Saturn</span>
+                <span class="artist-name">SZA</span>
+                <span class="release-year">2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="network.js"></script>
+  <script src="clock.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
