@@ -3,6 +3,11 @@
   src: url('fonts/PK\ Krung\ Thep-Medium.ttf');
 }
 
+@font-face {
+  font-family: 'NT'; /*a name to be used later*/
+  src: url('fonts/NotoSansThai-VariableFont.ttf');
+}
+
 /* Base styles */
 * {
   margin: 0;
@@ -11,14 +16,14 @@
 }
 
 :root {
-  --background: #080808;
+  --background: #090b13;
   --foreground: #f8f8f9;
-  --card-background: rgba(0, 0, 0, 0.4);
-  --card-border: rgba(155, 135, 245, 0.2);
-  --purple-accent: #9b87f5;
-  --purple-hover: #b19df8;
-  --card-glow: rgba(155, 135, 245, 0.2);
-  --card-glow-hover: rgba(155, 135, 245, 0.35);
+  --card-background: rgba(25, 37, 68, 0.4);
+  --card-border: rgba(135, 174, 245, 0.2);
+  --purple-accent: #87c0f5;
+  --purple-hover: #9df2f8;
+  --card-glow: rgba(135, 170, 245, 0.2);
+  --card-glow-hover: rgba(135, 183, 245, 0.35);
   --secondary: rgba(255, 255, 255, 0.6);
   --muted: rgba(255, 255, 255, 0.650);
 }
@@ -110,6 +115,7 @@ body {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
+  font-family: BK;
 }
 
 .text-purple {
@@ -122,7 +128,7 @@ body {
 
 /* About card */
 .about-text {
-  font-family: BK;
+  font-family: NT;
   color: var(--muted);
   margin-bottom: 1.5rem;
   letter-spacing: 0.1rem;
@@ -144,7 +150,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(10, 10, 15, 1);
+  background-color: rgb(10, 16, 24);
   padding: 0.3rem;
   border-radius: 0.3rem;
 }
@@ -160,6 +166,7 @@ body {
 .skill-name {
   color: white;
   margin-left: 0.5rem;
+  font-family: BK;
 }
 
 .skill-icon {
@@ -238,14 +245,14 @@ body {
 }
 
 .education-item {
-  background-color: rgba(10, 10, 15, 1);
+  background-color: rgb(10, 16, 24);
   padding: 1rem;
   border-radius: 0.375rem;
   transition: background-color 0.3s;
 }
 
 .education-item:hover {
-  background-color: rgba(22, 22, 29, 1);
+  background-color: rgb(25, 49, 68);
 }
 
 .degree {
@@ -273,7 +280,7 @@ body {
   padding: 0.75rem;
   border-radius: 0.5rem;
   transition: all 0.3s;
-  font-family: BK;
+  font-family: NT;
 }
 
 .music-item:hover {

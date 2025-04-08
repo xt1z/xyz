@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Draw particles
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(155, 135, 245, 0.8)";
+        ctx.fillStyle = "rgba(135, 214, 245, 0.8)";
         ctx.fill();
       });
       
