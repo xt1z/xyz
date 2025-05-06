@@ -68,7 +68,7 @@
   }
   
   h1, h2, h3 {
-    font-family: 'Fira Code', monospace;
+    font-family: ''Fira Code', monospace';
     line-height: 1.2;
   }
   
@@ -88,6 +88,11 @@
     margin: 2rem 0;
   }
   
+  .logo-icon {
+    width: 30px;
+    height: 30px;
+  }
+
   /* Theme Toggle */
   .theme-toggle {
     position: fixed;
@@ -215,6 +220,7 @@
   
   .section-content {
     font-size: 0.95rem;
+    font-family: 'Noto Sans Thai';
   }
   
   /* Education Cards */
@@ -299,6 +305,7 @@
     border: 1px solid var(--border);
     background-color: var(--card);
     transition: all 0.3s ease;
+    font-family: 'Noto Sans Thai';
   }
   
   .music-card:hover {
@@ -324,6 +331,7 @@
     padding: 0.25rem 0.5rem;
     border-radius: 9999px;
     margin-top: 0.5rem;
+
   }
   
   /* Contact Section */
@@ -342,6 +350,11 @@
     background-color: var(--secondary);
     border-radius: 50%;
     transition: background-color var(--transition-speed), transform 0.2s;
+  }
+
+  .social-icon img {
+    width: 40px;
+    height: 40px;
   }
   
   .social-icon:hover {
